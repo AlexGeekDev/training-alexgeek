@@ -1,0 +1,120 @@
+.stream {
+  &--status {
+    justify-content: space-around;
+  }
+  &--controls {
+    background: $dark2;
+    padding: 10px;
+  }
+  &--header {
+    background: $linearDark;
+  }
+  &--videosContainer {
+    width: 100%;
+    margin-top: 100px;
+  }
+  &--video {
+    border: solid 5px $secundary;
+    border-radius: 25px;
+    max-width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+    background-color: $dark2;
+    object-fit: cover;
+  }
+  &--videoLocal {
+    border: solid 5px $primary;
+    border-radius: 25px;
+    max-width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+    background-color: $dark2;
+    object-fit: cover;
+  }
+  &--idTitle {
+    font-size: 32px;
+  }
+  &--romId {
+    font-size: 32px;
+    color: $secundary;
+  }
+  &--photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &--cam {
+    width: 40px;
+    cursor: pointer;
+  }
+  &--mic {
+    width: 40px;
+    cursor: pointer;
+  }
+  &--saldoTitle {
+    color: $primary;
+  }
+  &--minutos {
+    cursor: pointer;
+  }
+}
+
+.hideVideoLocal {
+  display: none;
+}
+
+.streamMovile {
+  margin-top: 10px;
+  &--status {
+    padding: 5px;
+    font-size: 8px !important;
+  }
+  &--controls {
+    background: $dark2;
+    padding: 10px;
+  }
+  &--header {
+    background: $linearDark;
+    padding: 10px;
+  }
+  &--videosContainer {
+    width: 100%;
+    margin-top: 100px;
+  }
+  &--video {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    border: solid 5px $secundary;
+    border-radius: 25px;
+    max-width: 100%;
+    min-height: 500px;
+    background-color: $dark2;
+  }
+  &--videoLocal {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    border: solid 5px $primary;
+    border-radius: 25px;
+    max-width: 150px;
+    min-height: 150px;
+    background-color: $dark2;
+  }
+  &--romId {
+    color: $secundary;
+  }
+  &--photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &--cam {
+    width: 40px;
+    cursor: pointer;
+  }
+  &--mic {
+    width: 40px;
+    cursor: pointer;
+  }
+}

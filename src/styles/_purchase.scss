@@ -1,0 +1,47 @@
+.purchase {
+    &--btn {
+        // width: 100%;
+        font-size: 32px;
+        font-weight: 800;
+        background: $variation !important;
+        color: $dark2;
+    }
+    &--btnFree {
+        // width: 100%;
+        font-size: 32px;
+        font-weight: 800;
+        background: $warning !important;
+        color: $dark2;
+    }
+    &--btnNow {
+        // width: 100%;
+        font-size: 32px;
+        font-weight: 800;
+        background: $go !important;
+        color: $dark2;
+    }    
+    &--available {
+        color: $go;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &--date {
+        color: $secundary;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+.modal-header {
+    background: $dark2;
+    border-bottom: 1px solid $primary;
+}
+
+.modal-body {
+    background: $dark2;
+}
+
+.modal-footer {
+    background: $dark2;
+    border-top: 1px solid $secundary;
+}

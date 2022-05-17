@@ -1,0 +1,39 @@
+.authOptions {
+  background: $linearLeft;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &--item {
+    margin: 10px;
+  }
+  &--btnFacebook {
+    background: blue;
+    width: 100%;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 30px;
+  }
+  &--btnGoogle {
+    background: #28a745;
+    width: 100%;
+    color: white;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 30px;
+  }
+  &--btnCuenta {
+    background: $linearRight;
+    max-width: 500px;
+    color: white;
+    font-size: 32px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin: 10px;
+  }
+  &--title {
+    margin: 10px;
+  }
+  &--subtitle {
+    margin: 10px;
+  }
+}

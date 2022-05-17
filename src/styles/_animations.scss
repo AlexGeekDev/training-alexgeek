@@ -1,0 +1,113 @@
+.view {
+  animation-name: deca;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  z-index: 1;
+  @include view(400);
+}
+
+.plane {
+  @include plane($size, $size);
+}
+
+.main {
+  @include center;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  animation: rotate 60s infinite linear;
+}
+
+.circle {
+  width: $size;
+  height: $size;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  //border: 2px solid white;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px rgba($secundary, 1), inset 0 0 60px rgba($primary, 1);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    @include center;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    background: rgba($primary, 1);
+    //border: 4px solid black;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px 2px rgba($secundary, 1);
+  }
+
+  &::before {
+    transform: translateZ(-$l);
+  }
+  &::after {
+    transform: translateZ($l);
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transform: rotateZ($i / 5 * 360deg) rotateX(63.435deg);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+//Hero
+
+@keyframes deca {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes welcome {
+  from {
+    transform: translateX(-300px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scratch {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes scratch2 {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes person {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

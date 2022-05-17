@@ -1,0 +1,20 @@
+.teacherAprov {
+  border-bottom: 8px solid $primary;
+  border-top: 8px solid $secundary;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  &--photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  &--title {
+    width: 100%;
+  }
+  &--doc {
+    width: 300px;
+    margin-right: 20px;
+  }
+}

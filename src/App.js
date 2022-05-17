@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Paths from "./routes/Paths";
+import { useUiDataContext } from "./context/uiContext";
+import { useUserDataContext } from "./context/userContext";
+import { auth, db } from "./dataBase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { doc, onSnapshot } from "firebase/firestore";
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { setLoading, setRole, setActive, active } = useUiDataContext();
+  const { setUserDb, userDb } = useUserDataContext();
+
+  useEffect(() => {
+    try {
+      setLoading(true);
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const userRef = doc(db, "users", user.email);
+          onSnapshot(userRef, async (doc) => {
+            if (doc.exists()) {
+              await setUserDb(doc.data());
+              await setRole("User");
+              setActive(true);
+              setLoading(false);
+            }
+          });
+        } else {
+          setActive(false);
+          setLoading(false);
+        }
+      });
+      console.log(userDb);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  }, []);
+
+  return <Paths />;
 }
 
 export default App;

@@ -1,0 +1,29 @@
+.header {
+  justify-content: space-around;
+  background: $linearDark;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &--logo {
+    width: 150px;
+  }
+  &--nav {
+    padding: 0;
+    margin-top: 12px;
+  }
+  &--photo {
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+  &--photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  &--notif {
+    background: $warning;
+  }
+  &--notifTitle {
+    color: $dark2;
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,29 @@
+.editProfile {
+  @include cardP;
+  // max-width: 700px;
+  &--photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  &--btnPhoto {
+    @include btn-janz;
+  }
+  &--header {
+    background: $primary;
+    padding-top: 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  &--return {
+    background: $variation;
+  }
+  &--schedule {
+    border: 3px solid $primary;
+    padding: 10px;    
+  }
+  &--crop {
+    position: relative;
+    border: 2px solid $light;
+  }
+}

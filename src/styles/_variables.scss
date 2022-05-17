@@ -1,0 +1,284 @@
+//Variables
+
+$dark: black;
+$dark2: #1b262c;
+$light: white;
+$light2: #f5f5f5;
+$primary: #8227fd;
+$secundary: #1089ff;
+$variation: #323edd;
+$warning: #fbd46d;
+$danger: #ec0101;
+$go: #158467;
+$radial: radial-gradient(ellipse at center,
+        rgba($primary, 1) 0%,
+        rgba($secundary, 1) 100%);
+$linearRight: linear-gradient(to right,
+        rgba($primary, 1) 0%,
+        rgba($secundary, 1) 100%);
+$linearLeft: linear-gradient(to left,
+        rgba($primary, 1) 0%,
+        rgba($secundary, 1) 100%);
+$linearBottom: linear-gradient(to bottom,
+        rgba($primary, 1) 0%,
+        rgba($secundary, 1) 100%);
+$linearBottom2: linear-gradient(to bottom,
+        rgba($primary, 1) 0%,
+        rgba($variation, 1) 100%);
+$linearDark: linear-gradient(to bottom,
+        rgba($dark, 1) 0%,
+        rgba($dark2, 0.7) 100%);
+$fsmall: 1em;
+$fmedium: 1.5em;
+$fbig: 2em;
+$fsuperbig: 3em;
+
+// Animación del Hero
+
+$size: 150px;
+$l: 90px;
+$num: 10;
+$dur: 10s;
+
+// Animación Loading
+
+$size2: 150px;
+$l2: 90px;
+$num2: 10;
+$dur2: 10s;
+
+//Mixins
+
+@mixin link {
+    text-decoration: none;
+    color: $light;
+    font-size: 20px;
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+        color: $primary;
+        font-weight: 800;
+    }
+}
+
+@mixin btn-janz {
+    border-radius: 5px;
+    background: $linearRight;
+    box-shadow: 2px 2px 2px 0px rgba($light, 0.5);
+    cursor: pointer;
+    color: $light;
+    border-style: none;
+    padding: 5px 10px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none !important;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+@mixin box {
+    background: $dark2;
+    color: $light;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgba($secundary, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    & button {
+        width: 100%;
+        font-size: 24px;
+        padding: 0px;
+    }
+}
+
+@mixin boxBlog {
+    background: $dark2;
+    border: solid 1px $primary;
+    color: $light;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgba($secundary, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    & button {
+        width: 100%;
+        font-size: 24px;
+        padding: 0px;
+    }
+}
+
+@mixin boxBlogComments {
+    background: $light2;
+    border: solid 1px $primary;
+    color: $light;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgba($secundary, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    & button {
+        width: 100%;
+        font-size: 24px;
+        padding: 0px;
+    }
+}
+
+@mixin boxPrimary {
+    background: $linearLeft;
+    color: $dark;
+    text-align: left;
+    box-shadow: 5px 5px 5px 0px rgba($secundary, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+
+    // margin: 30px;
+    & button {
+        width: 100%;
+        font-size: 24px;
+        padding: 0px;
+    }
+}
+
+@mixin boxWarning {
+    background: $warning;
+    color: $dark;
+    text-align: left;
+    box-shadow: 5px 5px 5px 0px rgba($secundary, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+
+    // margin: 30px;
+    & button {
+        width: 100%;
+        font-size: 24px;
+        padding: 0px;
+    }
+}
+
+@mixin card {
+    background: $dark2;
+    box-shadow: 7px 7px 7px 0px rgba($secundary, 0.5);
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+@mixin cardP {
+    padding: 30px;
+    background: $dark2;
+    box-shadow: 7px 7px 7px 0px rgba($secundary, 0.5);
+    border-radius: 5px;
+    border: solid 1px $secundary;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+@mixin cardPHome {
+    padding: 30px;
+    background: $dark2;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+@mixin cardPost {
+    padding: 30px;
+    background: $dark2;
+    box-shadow: 7px 7px 7px 0px rgba($secundary, 0.5);
+    border-radius: 5px;
+    border: solid 1px $secundary;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+@mixin inner-card {
+    background: $dark2;
+    color: $secundary;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 120px;
+    max-height: 120px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+
+    & img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+@mixin card-badgeReg {
+    background: $light2;
+    color: $dark;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    width: 100px;
+    max-height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    & img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+//Animations
+
+//Deacaedro
+
+@mixin plane($w, $h) {
+    width: $w;
+    height: $h;
+    transform-style: preserve-3d;
+}
+
+@mixin view($p) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: $p;
+}
+
+@mixin center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

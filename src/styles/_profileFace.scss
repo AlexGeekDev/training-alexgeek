@@ -1,0 +1,71 @@
+.profile {
+  margin-bottom: 120px !important;
+  padding: 0;
+  @include card;
+  &--header {
+    border-bottom: 4px solid $secundary;
+    margin-bottom: 10px;
+  }
+  &--logo {
+    width: 250px;
+    margin-right: 30px;
+  }
+  &--name {
+    font-size: 48px;
+    margin-top: 10px;
+  }
+  &--warningTeacher {
+    color: $warning;
+  }
+  &--codesTitle {
+    color: $primary;
+  }
+  &--codes {
+    color: $secundary;
+  }
+  &--face {
+    border-radius: 5px;
+    background: $variation;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  &--info {
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+  }
+  &--info img {
+    width: 150px;
+    height: 150px;
+    margin: 0px 30px;
+    border-radius: 50%;
+    border: 7px solid $primary;
+    background: $dark2;
+  }
+  &--post {
+    padding: 0;
+  }
+  &--lessons {
+    border: solid 5px $primary;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  &--adminCleanTitle {
+    border-bottom: 3px solid $secundary;
+  }
+  &--falta {
+    color: $danger;
+  }
+  &--asistencia {
+    color: $go;
+  }
+  &--minutos {
+    color: $secundary;
+  }
+  &--inmediata {
+    color: $secundary;
+  }
+  &--reserva {
+    color: $primary;
+  }
+}

@@ -1,0 +1,17 @@
+.registerTeacher {
+  &--conditions {
+    @include boxPrimary;
+  }
+  &--verification {
+    @include boxWarning;
+  }
+  &--subjects {
+    border: solid $primary 5px;
+    background: $variation;
+  }
+  &--tilteSubjects {
+    background: $variation;
+    border-radius: 20px;
+    padding: 10px;
+  }
+}

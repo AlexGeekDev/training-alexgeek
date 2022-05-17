@@ -1,0 +1,65 @@
+.chatContainer {
+  background-color: $dark2;
+  padding: 0;
+  border-radius: 25px;
+  border: solid 3px $primary;
+  max-width: 350px;
+  margin-top: 60px;
+  &--form {
+    margin-bottom: 0 !important;
+    border-radius: 25px;
+  }
+  &--sendMsg {
+    & p {
+      margin: 0;
+    }
+    background-color: $primary;
+    border-radius: 15px;
+    text-align: start;
+    padding: 3px 15px;
+    max-width: 150px;
+    font-size: 16px;
+    white-space:initial; //por espacios en blanco en caso de solo utilizar <p> y no markdown
+    word-break: break-all; // por cualquier caracter
+    overflow-wrap: break-word; //para compatibilidad con todos los navegadores
+  }
+  &--reciveMsg {
+    & p {
+      margin: 0;
+    }
+    background-color: $secundary;
+    border-radius: 15px;
+    text-align: start;
+    padding: 3px 15px;
+    max-width: 150px;
+    font-size: 16px;
+    white-space:initial;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
+.chatText {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  transition: 0.1s;
+  transition-timing-function: linear;
+}
+
+.hideChatText {
+  transform: translateX(100%);
+}
+
+.streamMovilechatText {
+  position: absolute;
+  right: 0px;
+  top: -20px;
+  z-index: 3;
+  transition: 0.1s;
+  transition-timing-function: linear;
+}
+
+.streamMovilehideChatText {
+  display: none;
+}

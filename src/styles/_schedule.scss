@@ -1,0 +1,27 @@
+.schedule {
+    border-radius: 10px;
+    background: $dark2;
+    // margin: 10px;
+    &--dropdown {
+        margin-top: 25px;
+    }
+    &--selection {
+        font-size: 28px;
+        font-weight: 700;
+        color: $primary;
+    }
+    &--calendar {
+        background: $dark2;
+        border: 2px solid $primary;
+    }
+    &--available {
+        color: $go;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    &--notAvailable {
+        color: $danger;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

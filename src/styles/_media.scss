@@ -1,0 +1,178 @@
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: 500px;
+    &--container {
+      &__welcome {
+        margin-top: 10px;
+      }
+      &__title {
+        font-size: 4rem;
+      }
+      &__text {
+        font-size: 2rem;
+      }
+    }
+  }
+  .cardProfile--video {
+    width: 450px;
+  }
+  .stream--video {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .view2 {
+    margin-right: 100px;
+  }
+  .hero {
+    height: 750px;
+    &--container {
+      &__deca {
+        right: 50px;
+      }
+    }
+  }
+  .badgeSubjects {
+    @include cardPHome;
+    margin-top: 100px;
+    &--item {
+      padding: 0;
+    }
+    & img {
+      margin: 20px;
+    }
+    & h4 {
+      margin: 20px;
+      text-align: center;
+    }
+    &--parrafo {
+      letter-spacing: 2px;
+      padding: 10px;
+    }
+  }
+  .BadgeReg {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .card {
+    &--profile {
+      margin: 0;
+    }
+    &--desc {
+      padding: 10px;
+    }
+    &--video {
+      margin: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero {
+    height: 550px;
+    &--container {
+      &__welcome {
+        margin-top: 5px;
+      }
+      &__person {
+        left: 120px;
+        width: 350px;
+      }
+      &__scratch {
+        width: 450px;
+      }
+      &__title {
+        font-size: 2rem;
+      }
+      &__text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .badgeSubjects {
+    margin-top: 30px;
+  }
+  .card {
+    &--video {
+      transform: scale(0.8);
+    }
+  }
+  .isActiveBurger {
+    transform: translateX(30%) !important;
+  }
+}
+.profile {
+  margin: 0;
+}
+.profileTeacher {
+  margin: 0;
+}
+
+@media screen and (max-width: 470px) {
+  .hero {
+    &--container {
+      &__person {
+        left: 30px;
+      }
+    }
+  }
+  .cardProfile--video {
+    width: 380px;
+  }
+  .stream--video {
+    max-width: 380px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    height: 500px;
+    &--container {
+      &__person {
+        left: 50px;
+        width: 280px;
+      }
+      &__deca {
+        transform: scale(0.7);
+      }
+    }
+  }
+  .cardProfile--video {
+    width: 320px;
+  }
+  .header--nav img {
+    margin-left: 69px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hero {
+    height: 450px;
+  }
+  .cardProfile--video {
+    width: 280px;
+  }
+  .header--nav img {
+    margin-left: 40px;
+  }
+  .burgerMenu--logo {
+    width: 100px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    height: 420px;
+    &--container {
+      &__person {
+        left: 20px;
+        width: 270px;
+      }
+    }
+  }
+  .isActiveBurger {
+    transform: translateX(20%) !important;
+  }
+}

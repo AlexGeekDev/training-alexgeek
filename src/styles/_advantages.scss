@@ -1,0 +1,15 @@
+.advantages {
+    @include cardPHome;
+    &--img {
+        width: 100px;
+    }
+    &--img2 {
+        width: 140px;
+    }
+    &--img3 {
+        width: 140px;
+    }
+    &--img4 {
+        width: 180px;
+    }
+}

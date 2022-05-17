@@ -1,0 +1,42 @@
+.BadgeReg {
+  background: $linearBottom2;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  &--desc {
+    font-size: 22px;
+    padding: 50px;
+  }
+  &--imgProfile {
+    width: 120px;
+    border-radius: 50%;
+    margin: 15px;
+  }
+  &--name {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  &--lastName {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+  }
+  &--user {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 15px;
+  }
+  &--jobTitle {
+    @include card-badgeReg;
+  }
+  &--speciality {
+    @include card-badgeReg;
+  }
+  &--region {
+    @include card-badgeReg;
+  }
+  &--tarifa {
+    @include card-badgeReg;
+  }
+}

@@ -1,0 +1,29 @@
+.about {
+    &--banner {
+        background-image: 
+        url(../assets//img/bannerAbout.png);
+        background-position: center;
+        background-size: contain;
+        border-top: 3px solid $primary;
+        border-bottom: 3px solid $secundary;
+    }
+    &--founderPhoto {
+        max-height: 300px;
+    }
+    &--bannerText {
+        text-align: justify;
+    }
+    &--gif {
+        max-width: 260px;
+        border-radius: 20px;
+        border: 2px solid $primary;
+    }
+    &--tech {
+        background: $dark2;
+        border-top: 3px solid $secundary;
+        border-bottom: 3px solid $primary;
+    }
+    &--techText {
+        text-align: justify;
+    }
+}

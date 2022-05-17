@@ -1,0 +1,75 @@
+.react-datepicker {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    background-color: $dark2 !important;
+    color: #000;
+    border: 1px solid $primary !important;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.react-datepicker__time-container {
+    border-left: 1px solid $primary !important;
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected:hover {
+    background-color: $primary;
+}
+
+.react-datepicker__header {
+    text-align: center;
+    background-color: $dark2 !important;
+    border-bottom: 1px solid $primary !important;
+    border-top-left-radius: 0.3rem;
+    padding-top: 8px;
+    position: relative;
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+    margin-top: 0;
+    color: $secundary !important;
+    font-weight: bold;
+    font-size: 0.944rem;
+}
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+    color: $secundary !important;
+    display: inline-block;
+    width: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+    margin: 0.166rem;
+}
+
+.react-datepicker {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: $primary !important;
+    background-color: $dark2 !important;
+}
+
+.react-datepicker__day--selected {
+    background-color: $primary !important;
+    color: $dark2 !important;
+}
+
+.react-datepicker__day--disabled {
+    color: #393e46 !important;
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
+    color: #393e46 !important;
+}
+
+.react-datepicker__time-container .react-datepicker__time {
+    position: relative;
+    background: $dark2 !important;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: $secundary !important;
+    color: $dark2 !important;
+}

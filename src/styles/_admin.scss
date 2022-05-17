@@ -1,0 +1,47 @@
+.admin {
+  &--form {
+    @include boxPrimary;
+    width: 500px;
+  }
+  &--card {
+    border: solid 1px $primary;
+    @include card;
+  }
+  &--btnDelAdmin {
+    width: 100px;
+    margin-bottom: 10px;
+    background: red;
+  }
+  &--btnAdmin {
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  &--btnTeacher {
+    width: 100px;
+    margin-bottom: 10px;
+    background: green;
+  }
+  &--btnUser {
+    width: 100px;
+    margin-bottom: 10px;
+    background: blue;
+  }
+  &--provider {
+    width: 40px;
+  }
+  &--name {
+    color: $secundary;
+  }
+  &--email {
+    color: $variation;
+  }
+  &--date {
+    color: $primary;
+  }
+  &--verified {
+    color: $go;
+  }
+  &--noVerified {
+    color: $warning;
+  }
+}

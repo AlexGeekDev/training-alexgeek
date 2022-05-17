@@ -1,0 +1,20 @@
+.stripe {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    box-shadow: none;
+    &--logo {
+        width: 80px;
+    }
+    &--logoJanz {
+        // width: 60px;
+        height: 50px;
+    }
+    &--formControl {
+        width: 250px;
+        border-radius: 5px;
+    }
+    &--formControlCode {
+        width: 80px;
+        border-radius: 5px;
+    }
+}

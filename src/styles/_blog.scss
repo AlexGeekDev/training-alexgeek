@@ -1,0 +1,42 @@
+.blog {
+    @include boxBlog;
+    &--header {
+        border-radius: 5px;
+    }
+    &--photo {
+        // position: absolute;
+        // left: 10%;
+        margin-top: 20px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        border: solid 5px $secundary;
+    }
+    &--name {
+        // position: absolute;
+        // right: 15%;
+        margin-top: 50px;
+    }
+    &--title {
+        color: $primary;
+        margin-top: 70px;
+    }
+    &--subtitle {
+        color: $secundary;
+    }
+    &--firstLine {
+        padding: 20px;
+        border-top: solid 3px $primary;
+    }
+    &--resume {
+        padding: 0px 20px;
+    }
+    &--finalLine {
+        margin-bottom: 20px;
+        padding: 20px;
+        border-bottom: solid 3px $secundary;
+    }
+    &--comments {
+        @include boxBlogComments
+    }
+}

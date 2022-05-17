@@ -1,0 +1,73 @@
+  .lobby {
+    &--aware {
+      color: $secundary;
+    }
+    &--timeOut {
+      color: $danger;
+    }
+    &--classWarning {
+      color: $warning;
+    }
+    &--countdown {
+      color: $secundary;
+    }
+    &--countdownRoom {
+      color: $secundary;
+      font-size: 34px;
+    }
+    &--codes {
+      @include box;
+    }
+    &--warningTeacher {
+      color: $warning;
+    }
+    &--codesTitle {
+      color: $primary;
+    }
+    &--lessons {
+      border: solid 3px $secundary;
+      border-radius: 25px;
+      padding: 20px;
+      margin: 10px 10px;
+    }
+    &--name {
+      color: $secundary;
+    }
+    &--photo {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      border: 5px solid $variation;
+      background: $dark2;
+    }
+    &--id {
+      font-size: 26px;
+      padding: 20px 10px 0px 20px;
+    }
+    &--lobbyGift {
+      border: solid $secundary 1px;
+    }
+    &--date {
+      color: $go;
+      font-size: 34px;
+    }
+    &--dateCurrent {
+      color: $danger;
+      font-size: 18px;
+    }
+    &--date-1 {
+      color: $warning;
+      font-size: 18px;
+    }
+    &--datePlus1 {
+      color: $danger;
+      font-size: 18px;
+    }
+    &--dateOntime {
+      color: $secundary;
+      font-size: 18px;
+    }
+    &--nowTitle {
+      color: $warning;
+    }
+}

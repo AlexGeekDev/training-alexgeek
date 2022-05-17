@@ -1,0 +1,145 @@
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../assets/img/background.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: $light;
+}
+
+.btnDelete {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+span {
+  @include link;
+}
+
+a {
+  color: $light;
+}
+
+a:hover {
+  color: $light;
+}
+
+button {
+  @include btn-janz;
+}
+
+.btnJanz {
+  @include btn-janz;
+}
+
+.btnDanger {
+  background: $danger;
+}
+.btnWarning {
+  background: $warning;
+  color: $dark;
+}
+.btnWarningLight {
+  background: $warning;
+  color: $dark;
+  padding: 0px 10px;
+}
+.btnGo {
+  background: $go;
+}
+
+.btnPrimary {
+  background: $primary;
+}
+
+.btnSecundary {
+  background: $secundary;
+}
+
+.btnVariation {
+  background: $variation;
+}
+
+.btnDark {
+  background: $dark;
+}
+
+.btnDark2 {
+  background: $dark2;
+}
+
+.btnLight {
+  background: $light;
+}
+
+.btnLight2 {
+  background: $light2;
+}
+
+form {
+  @include box;
+}
+
+.player-wrapper {
+  border: 5px solid $variation;
+}
+
+.btn-primary.dropdown-toggle {
+  padding: 7px 30px 7px 30px;
+}
+
+.btn-primary.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+
+.dropdown-menu {
+  background-color: $dark2 !important;
+  background-clip: padding-box;
+  border: 2px solid $secundary;
+}
+
+.dropdown-item {
+  color: $primary !important;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 0px 20px;
+  &--title {
+    grid-row: 1;
+    align-self: center;
+    margin: 20px 0px;
+    text-align: center;
+    font-size: $fsuperbig;
+  }
+  &--paragraph {
+    grid-row: 2;
+    text-align: center;
+    margin: 0;
+    font-size: $fmedium;
+  }
+  &--laptop {
+    grid-row: 1/3;
+    align-self: center;
+    width: 350px;
+  }
+}

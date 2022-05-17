@@ -1,0 +1,128 @@
+.card {
+  background: $linearBottom2;
+  max-width: 1000px;
+  margin-top: 20px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  &--filter {
+    @include cardP;
+    background: $dark2;
+    border-radius: 10px;
+  }
+  &--desc {
+    background: $dark2;
+    border-radius: 10px;
+    margin: 0px 0px 0px 10px;
+    color: $secundary;
+    font-size: 22px;
+    font-weight: 800;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  &--profile {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  &--imgProfile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid $variation;
+    background: $dark2;
+    box-shadow: 
+    0 0 0 3px hsl(0, 0%, 20%),
+  }
+  &--photoAvailable {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid $go;
+    background: $dark2;
+    box-shadow: 
+    0 0 0 3px hsl(0, 0%, 20%),
+  }
+  &--name {
+    font-size: 24px;
+    font-weight: 900;
+  }
+  &--buttons {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    background: $dark2;
+    color: $primary;
+    font-size: 32px;
+  }
+  &--jobTitle {
+    @include inner-card;
+  }
+  &--speciality {
+    @include inner-card;
+  }
+  &--region {
+    @include inner-card;
+    & img {
+      width: 50px;
+    }
+  }
+  &--tarifa {
+    @include inner-card;
+  }
+  &--subjects {
+    border-bottom: 3px solid $secundary ;
+  }
+  &--categories {
+    background: $dark2;
+    margin-bottom: 15px;
+    border-radius: 20px;
+  }
+  &--subjectImg {
+    width: 50px;
+    height: 50px;
+  }
+  &--finderImg {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  &--materia {
+    color: $variation;
+    font-weight: 900;
+    margin-top: 15px;
+  }
+  &--janzLogo {
+    height: 50px;
+    width: 120px;
+    margin-top: 5px;
+  }
+  &--materiaImg {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+  }
+  &--finderImg {
+    width: 50px;
+    height: 50px;
+    // margin-top: 20px;
+  }
+  &--mateTitle {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  &--categoria {
+    margin-top: 20px;
+  }
+  &--filterBtn {
+    max-height: 40px;
+  }
+  &--prueba {
+    background: $dark2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: $warning;
+  }
+}
+
+

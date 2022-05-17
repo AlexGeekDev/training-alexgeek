@@ -1,0 +1,22 @@
+.footer {
+    background: $linearLeft;
+    padding: 5px 10px 0px 10px;
+
+    &--item {
+        color: $light;
+    }
+
+    &--img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    &--socialMedia {
+        background-color: $dark2;
+    }
+
+    &--movile {
+        width: 160px;
+        height: 50px;
+    }
+}

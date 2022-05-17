@@ -1,0 +1,9 @@
+.cardProfile {
+  border-radius: 5px;
+  background: $primary;
+  &--video {
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+}

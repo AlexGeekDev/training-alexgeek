@@ -1,0 +1,57 @@
+.hero {
+  margin-top: 20px;
+  height: 600px;
+  &--container {
+    &__welcome {
+      animation-name: welcome;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-direction: alternate;
+      z-index: 3;
+      margin-top: 20px;
+    }
+    &__deca {
+      margin-top: 50px;
+    }
+    &__person {
+      margin-top: 50px;
+      max-width: 600px;
+    }
+    &__title {
+      text-align: center;
+      font-size: 6rem;
+      font-weight: 900;
+      text-shadow: -4px 3px 2px $primary;
+    }
+    &__text {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 900;
+      text-shadow: -4px 3px 2px $secundary;
+    }
+    &__scratch {
+      animation-name: scratch;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    &__scratch2 {
+      width: 50px;
+      animation-name: scratch2;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    &__person {
+      // visibility: hidden;
+      z-index: 2;
+      animation-name: person;
+      animation-duration: 2s;
+      // animation-delay: 1s;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+    }
+  }
+}
