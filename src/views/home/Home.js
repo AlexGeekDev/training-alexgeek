@@ -5,7 +5,6 @@ import BadgeHero from "../../components/BadgeHero";
 import Advantages from "../../components/Advantages";
 // import Carousel from "../components/CarouselComp";
 import { FacebookProvider, Like } from "react-facebook";
-import JanzAd from "../../assets/video/JanzAd.mp4";
 import AlexGeek from "../../assets/video/JanzTeacherAlexZepeda.mp4";
 import JanzAdThumbail from "../../assets/logo/JanzThumbail.png";
 // import CountDown from "../components/CountdownRelease";
