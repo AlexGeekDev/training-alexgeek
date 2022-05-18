@@ -30,15 +30,14 @@ const Footer = () => {
       <div className="container-fluid footer">
         <div className="row justify-content-center text-center">
           <div className="col-xs-1-12 col-lg-2">
-            <Link to="/AboutUs">
+            <Link to="/about">
               <h5 onClick={toTop}>Acerca de Nosotros</h5>
             </Link>
           </div>
           <div className="col-xs-1-12 col-lg-2">
             <Link
               to={{
-                pathname:
-                  "https://api.whatsapp.com/send?phone=527227098833&text=Hola%20Janz!%20necesito%20ayuda!",
+                pathname: "https://wa.me/527227098833",
               }}
               target="_blank"
             >
@@ -46,19 +45,14 @@ const Footer = () => {
             </Link>
           </div>
           <div className="col-xs-1-12 col-lg-2">
-            <Link to="/FrecQuestions">
-              <h5 onClick={toTop}>Preguntas Frecuentes</h5>
-            </Link>
-          </div>
-          <div className="col-xs-1-12 col-lg-2">
-            <Link to="/Policy">
+            <Link to="/policy">
               <h5 onClick={toTop} className="footer--item">
                 Política de Privacidad
               </h5>
             </Link>
           </div>
           <div className="col-xs-1-12 col-lg-2">
-            <Link to="/Privacy">
+            <Link to="/privacy">
               <h5 onClick={toTop} className="footer--item">
                 Terminos y Condiciones
               </h5>
