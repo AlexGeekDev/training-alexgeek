@@ -69,13 +69,13 @@ const FormLogin = () => {
                     maxLength="30"
                     placeholder="Password"
                     name="password"
-                    className="form-control"
+                    className="form-control mb-4"
                     value={password}
                     onChange={handleInputChange}
                   />
                 </div>
 
-                <div className="text-center mb-4">
+                <div className="text-center mb-2">
                   <button className="login--btnLogin" disabled={loading}>
                     Inicia Sesión
                   </button>
@@ -83,7 +83,7 @@ const FormLogin = () => {
               </form>
             }
             <div className="text-center">
-              <Link to="/ResetPassword">
+              <Link to="/reset">
                 <button className="btnWarning" disabled={loading}>
                   Recuperar Contraseña
                 </button>

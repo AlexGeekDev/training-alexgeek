@@ -4,11 +4,11 @@ import { useUserDataContext } from "./context/userContext";
 import { auth, db } from "./dataBase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
-import { useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 function App() {
-  const { setLoading, setRole, setActive, active } = useUiDataContext();
-  const { setUserDb, userDb } = useUserDataContext();
+  const { setLoading, setRole, setActive } = useUiDataContext();
+  const { setUserDb } = useUserDataContext();
 
   useEffect(() => {
     try {
@@ -29,7 +29,6 @@ function App() {
           setLoading(false);
         }
       });
-      console.log(userDb);
     } catch (error) {
       console.log(error);
       setLoading(false);

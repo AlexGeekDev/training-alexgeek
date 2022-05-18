@@ -11,7 +11,7 @@ export const UiDataProvider = (props) => {
   const [role, setRole] = useState();
   const [language, setLanguage] = useState("en");
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const [currentArtist, setCurrentArtist] = useState();
+  const [courses, setCourses] = useState();
 
   const defaultContext = {
     active,
@@ -26,8 +26,8 @@ export const UiDataProvider = (props) => {
     setLanguage,
     isDataLoaded,
     setIsDataLoaded,
-    currentArtist,
-    setCurrentArtist,
+    courses,
+    setCourses,
   };
 
   return (

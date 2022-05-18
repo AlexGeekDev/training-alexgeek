@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <Container className="container-fluid header sticky-top">
+      <Container fluid className="header sticky-top">
         <Row className="row align-items-center ">
           {active && (
             <Col xs className="header--nav">
@@ -50,7 +50,7 @@ const Header = () => {
           )}
 
           <Col xs className="header--nav text-center">
-            <Link to="/Finder">
+            <Link to="/finder">
               <span className="font-weight-light">Encuentra un Curso</span>
             </Link>
           </Col>
