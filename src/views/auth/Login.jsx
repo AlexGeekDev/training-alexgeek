@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AuthOptions from "../../components/AuthOptions";
 import FormRegister from "../../components/FormRegister";
 import FormLogin from "../../components/FormLogin";
 import { useUiDataContext } from "../../context/uiContext";
 import LogoAnimation2 from "../../components/LogoAnimation";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { active, loading } = useUiDataContext();
   const [esRegistro, setEsRegistro] = useState(true);
+  const navigate = useNavigate();
+  console.log(active);
+
+  useEffect(() => {
+    if (active) {
+      navigate("/");
+    }
+  }, [active]);
 
   const cancel = () => {
     // dispatch(finishLoading());
