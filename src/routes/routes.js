@@ -9,9 +9,9 @@ const routes = {
   privacy: "/privacy",
   finder: "/finder",
   reset: "/reset",
-  artist: {
-    static: "artist/:name",
-    dynamic: (name) => `/artist/${name}`,
+  user: {
+    static: "user/:name",
+    dynamic: (name) => `/user/${name}`,
   },
 };
 

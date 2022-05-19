@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSadTear } from "@fortawesome/free-solid-svg-icons";
 import { useUiDataContext } from "../context/uiContext";
+import { regWithGoogle, regWithFacebook } from "../services/auth";
 
 const AuthOptions = () => {
   const { loading } = useUiDataContext();
 
   const agent = window.navigator.userAgent;
-  // console.log(agent);
 
   return (
     <Fragment>
@@ -17,7 +17,7 @@ const AuthOptions = () => {
           <div className="col-xs-1-6 col-lg-12 authOptions--item">
             <button
               className="authOptions--btnFacebook"
-              // onClick={() => dispatch(startFacebookLogin())}
+              onClick={() => regWithFacebook()}
               disabled={loading}
             >
               Facebook
@@ -26,7 +26,7 @@ const AuthOptions = () => {
           <div className="col-xs-1-6 col-lg-12 authOptions--item">
             <button
               className="authOptions--btnGoogle"
-              // onClick={() => dispatch(startGoogleLogin())}
+              onClick={() => regWithGoogle()}
               disabled={loading}
             >
               Google
@@ -38,7 +38,7 @@ const AuthOptions = () => {
           <div className="col-xs-1-6 col-lg-12 authOptions--item">
             <button
               className="authOptions--btnGoogle"
-              // onClick={() => dispatch(startGoogleLoginRedirect())}
+              onClick={() => regWithGoogle()}
               disabled={loading}
             >
               Google
