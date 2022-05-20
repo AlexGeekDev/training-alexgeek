@@ -3,16 +3,12 @@ const routes = {
   login: "/login",
   signup: "/signup",
   welcome: "/welcome",
-  profile: "/profile",
   about: "/about",
   policy: "/policy",
   privacy: "/privacy",
   finder: "/finder",
   reset: "/reset",
-  user: {
-    static: "user/:name",
-    dynamic: (name) => `/user/${name}`,
-  },
+  profile: "/@:name",
 };
 
 export default routes;

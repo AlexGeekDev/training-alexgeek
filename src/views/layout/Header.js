@@ -10,7 +10,6 @@ import { Container, Row, Col } from "react-bootstrap";
 const Header = () => {
   const { active } = useUiDataContext();
   const { userDb } = useUserDataContext();
-
   const navigate = useNavigate();
 
   const logOut = () => {
@@ -27,7 +26,7 @@ const Header = () => {
               <Link to="/">
                 <img className="header--logo" src={logo} alt="logo janz" />
               </Link>
-              <Link to="/Welcome">
+              <Link to={`/@${userDb.path}`}>
                 <img className="header--photo" src={userDb.photo} alt="" />
               </Link>
             </Col>
@@ -43,7 +42,7 @@ const Header = () => {
 
           {active && (
             <Col xs className="header--nav text-center">
-              <Link to="/Welcome">
+              <Link to={`/@${userDb.path}`}>
                 <span className="font-weight-light"> {userDb.name} </span>
               </Link>
             </Col>

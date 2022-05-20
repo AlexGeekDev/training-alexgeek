@@ -18,7 +18,8 @@ function App() {
           const userRef = doc(db, "users", user.email);
           onSnapshot(userRef, async (doc) => {
             if (doc.exists()) {
-              await setUserDb(doc.data());
+              let path = doc.data().name.replace(/\s+/g, "");
+              await setUserDb({ ...doc.data(), path });
               await setRole("User");
               setActive(true);
               setLoading(false);
