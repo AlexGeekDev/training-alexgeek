@@ -1,24 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { useUiDataContext } from "../context/uiContext";
+import { Navigate } from "react-router-dom";
 
-import { Route, Redirect } from "react-router-dom";
-
-export const PrivateRoute = ({
-  isAuthenticated,
-  component: Component,
-  ...rest
-}) => {
-  return (
-    <Route
-      {...rest}
-      component={(props) =>
-        isAuthenticated ? <Component {...props} /> : <Redirect to="/Login" />
-      }
-    />
-  );
-};
-
-PrivateRoute.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired,
-  component: PropTypes.func.isRequired,
+export const PrivateRoute = ({ children }) => {
+  const { active } = useUiDataContext();
+  return active ? children : <Navigate to="/login" />;
 };

@@ -44,7 +44,6 @@ const Home = () => {
           </Row>
         </Container>
       )}
-      {/* <CountDown /> */}
       <Hero />
       <BadgeHero />
       <Container>
@@ -66,7 +65,6 @@ const Home = () => {
         </Row>
         <Row className="justify-content-center mx-2">{/* <Carousel /> */}</Row>
       </Container>
-      {/* <HowItWorks /> */}
       <Advantages />
     </Fragment>
   );
