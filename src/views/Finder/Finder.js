@@ -10,7 +10,7 @@ const Finder = () => {
   return (
     <Fragment>
       <Container className="courses">
-        <Row className="justify-content-center">
+        <Row style={{ justifyContent: "center" }}>
           <Col md="auto">
             <CoursesCard />
           </Col>

@@ -2,17 +2,17 @@
   @include cardP;
   // max-width: 700px;
   &--photo {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
   &--btnPhoto {
     @include btn-janz;
   }
   &--header {
-    background: $primary;
+    // background: $primary;
     padding-top: 10px;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-bottom: 10px;
   }
   &--return {
@@ -20,10 +20,15 @@
   }
   &--schedule {
     border: 3px solid $primary;
-    padding: 10px;    
+    padding: 10px;
   }
   &--crop {
     position: relative;
     border: 2px solid $light;
+  }
+  &--dash {
+    background: $variation;
+    padding: 20px 10px 5px 10px;
+    border-radius: 5px;
   }
 }

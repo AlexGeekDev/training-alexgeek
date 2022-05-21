@@ -6,6 +6,7 @@ import logo from "../../assets/logo/janz.png";
 import { useUiDataContext } from "../../context/uiContext";
 import { useUserDataContext } from "../../context/userContext";
 import { logout } from "../../services/auth";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
@@ -38,12 +39,10 @@ const Burger = () => {
 
   return (
     <Fragment>
-      <div
-        className={`${
-          open ? "container burger isActiveBurger" : "container burger"
-        }`}
+      <Container
+        className={`${open ? "burger isActiveBurger" : "container burger"}`}
       >
-        <div className="">
+        <Fragment>
           <button
             ref={ref2}
             className={`${
@@ -66,14 +65,14 @@ const Burger = () => {
               <span className="hamburger-inner"></span>
             </span>
           </button>
-        </div>
-      </div>
+        </Fragment>
+      </Container>
       {/* Hamburger Menu a partir de aquí para que al dar click en enlaces tambien se oculte */}
       <div ref={ref} className={`${open ? "burgerMenu isActive" : ""}`}>
         <Fragment>
-          <div className="container text-center burgerMenu">
-            <div className="row align-items-center mb-2">
-              <div className="col-xs-1-12 col-lg-8 burgerMenu--nav">
+          <Container className="text-center burgerMenu">
+            <Row className="align-items-center mb-5 mt-4">
+              <Col xs={12} className="burgerMenu--nav">
                 <Link to="/">
                   <img
                     onClick={() => {
@@ -90,35 +89,55 @@ const Burger = () => {
                     alt="logo janz"
                   />
                 </Link>
-              </div>
-            </div>
+              </Col>
+            </Row>
 
             {active && (
-              <div className="row align-items-center mb-2">
-                <div className="col-xs-1-12 col-lg-8 burgerMenu--nav">
-                  {role === "User" && (
-                    <Link to={`/+${userDb.uid}`}>
-                      <img
-                        onClick={() => {
-                          if (open === true) {
-                            setOpen(false);
-                            handleClickOutside(false);
-                          } else {
-                            setOpen(true);
-                          }
-                          scroll.scrollToTop({ duration: 500 });
-                        }}
-                        className="burgerMenu--photo"
-                        src={userDb.photo}
-                        alt=""
-                      />
-                    </Link>
-                  )}
-                </div>
-              </div>
+              <Fragment>
+                <Row className="align-items-center mb-2">
+                  <Col xs={12} className="burgerMenu--nav">
+                    {role === "User" && (
+                      <Link to={`/@${userDb.path}`}>
+                        <img
+                          onClick={() => {
+                            if (open === true) {
+                              setOpen(false);
+                              handleClickOutside(false);
+                            } else {
+                              setOpen(true);
+                            }
+                            scroll.scrollToTop({ duration: 500 });
+                          }}
+                          className="burgerMenu--photo"
+                          src={userDb.photo}
+                          alt=""
+                        />
+                      </Link>
+                    )}
+                  </Col>
+                </Row>
+                <Col xs={12} className="burgerMenu--nav mb-5">
+                  <Link to={`/@${userDb.path}`}>
+                    <span
+                      onClick={() => {
+                        if (open === true) {
+                          setOpen(false);
+                          handleClickOutside(false);
+                        } else {
+                          setOpen(true);
+                        }
+                        scroll.scrollToTop({ duration: 500 });
+                      }}
+                      className="font-weight-light"
+                    >
+                      {userDb.name}
+                    </span>
+                  </Link>
+                </Col>
+              </Fragment>
             )}
 
-            <div className="col-xs-1-12 col-lg-1 burgerMenu--nav mb-2">
+            <Col xs={12} className="burgerMenu--nav mb-4">
               <Link to="/finder">
                 <span
                   onClick={() => {
@@ -135,11 +154,11 @@ const Burger = () => {
                   Encuentra un Curso
                 </span>
               </Link>
-            </div>
+            </Col>
 
-            <div className="row align-items-center mb-2">
+            <Row className="align-items-center mb-5 mt-5">
               {!active && (
-                <div className="col-xs-1-12 col-lg-1 burgerMenu--nav ">
+                <Col xs={12} className="burgerMenu--nav ">
                   <Link to="/Login">
                     <span
                       onClick={() => {
@@ -156,13 +175,13 @@ const Burger = () => {
                       Iniciar Sesión
                     </span>
                   </Link>
-                </div>
+                </Col>
               )}
-            </div>
+            </Row>
 
-            <div className="row align-items-center mb-2">
+            <Row className="align-items-center mb-4">
               {!active && (
-                <div className="col-xs-1-12 col-lg-1 burgerMenu--nav">
+                <Col xs={12} className="burgerMenu--nav">
                   <Link to="/Register">
                     <button
                       onClick={() => {
@@ -179,12 +198,12 @@ const Burger = () => {
                       Regístrate
                     </button>
                   </Link>
-                </div>
+                </Col>
               )}
-            </div>
-            <div className="row align-items-center mb-5">
+            </Row>
+            <Row className="align-items-center mb-5">
               {active && (
-                <div className="col-xs-1-12 col-lg-1 burgerMenu--nav">
+                <Col xs={12} className="burgerMenu--nav">
                   <button
                     onClick={() => {
                       if (open === true) {
@@ -200,10 +219,10 @@ const Burger = () => {
                   >
                     Cerrar Sesión
                   </button>
-                </div>
+                </Col>
               )}
-            </div>
-          </div>
+            </Row>
+          </Container>
         </Fragment>
       </div>
     </Fragment>

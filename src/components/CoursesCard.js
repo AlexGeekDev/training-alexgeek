@@ -13,7 +13,7 @@ const CoursesCard = () => {
         marginBottom: 18,
       }}
     >
-      <Card.Img variant="top" src={geekLanguage} className="couse--image" />
+      <Card.Img variant="top" src={geekLanguage} className="course--image" />
       <Card.Body>
         <Card.Title>Inglés by alex Geek</Card.Title>
         <Card.Text>

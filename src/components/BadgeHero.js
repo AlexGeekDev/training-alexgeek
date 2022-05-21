@@ -17,7 +17,7 @@ const BadgeHero = () => {
     <React.Fragment>
       <Container fluid className="container-fluid badgeSubjects mt-1">
         <Row className="justify-content-center text-center">
-          <Link to="/Profesores">
+          <Link to="/finder">
             <h2 className="text-primary">Toma ya tu prueba gratuita</h2>
           </Link>
         </Row>
@@ -25,32 +25,26 @@ const BadgeHero = () => {
           <h2>Aprende con cursos grabados de clases en la vida real 🚀</h2>
         </Row>
         <Row className="justify-content-around text-center card--subjects">
-          <Col xs>
-            <Link to="/Profesores">
+          <Col xs={3}>
+            <Link to="/finder">
               <img onClick={onTop} src={idiomas} alt="Idiomas" />
               <h6 onClick={onTop}>Idiomas</h6>
             </Link>
           </Col>
-          <Col xs>
-            <Link to="/Profesores">
-              <img onClick={onTop} src={mat} alt="Matemáticas" />
-              <h6 onClick={onTop}>Matemáticas</h6>
-            </Link>
-          </Col>
-          <Col xs>
-            <Link to="/Profesores">
+          <Col xs={3}>
+            <Link to="/finder">
               <img src={laptop} alt="Historia" className="card--subjectImg" />
               <h6>Informática</h6>
             </Link>
           </Col>
-          <Col xs>
-            <Link to="/Profesores">
+          <Col xs={3}>
+            <Link to="/finder">
               <img onClick={onTop} src={robotica} alt="Robótica" />
               <h6 onClick={onTop}>Robótica</h6>
             </Link>
           </Col>
-          <Col xs>
-            <Link to="/Profesores">
+          <Col xs={3}>
+            <Link to="/finder">
               <img onClick={onTop} src={desarrollo} alt="Desarrollo" />
               <h6 onClick={onTop}>Desarrollo</h6>
             </Link>
