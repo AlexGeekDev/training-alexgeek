@@ -6,6 +6,7 @@ export const UserDataContext = createContext();
 
 export const UserDataProvider = (props) => {
   const [userDb, setUserDb] = useState();
+  const [english, setEnglish] = useState();
   const [timeZoneDiff, setTimeZoneDiff] = useState();
   const [nameTimeZone, setNameTimeZone] = useState();
 
@@ -16,6 +17,8 @@ export const UserDataProvider = (props) => {
     setTimeZoneDiff,
     nameTimeZone,
     setNameTimeZone,
+    english,
+    setEnglish,
   };
 
   return (

@@ -91,11 +91,6 @@ button {
 form {
   @include box;
 }
-
-.player-wrapper {
-  border: 5px solid $variation;
-}
-
 .btn-primary.dropdown-toggle {
   padding: 7px 30px 7px 30px;
 }
@@ -156,4 +151,15 @@ form {
 .courses {
   justify-content: center;
   text-align: center;
+}
+
+.player-wrapper {
+  padding-top: 0;
+  border: 5px solid $variation;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

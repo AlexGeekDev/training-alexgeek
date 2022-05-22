@@ -7,6 +7,7 @@ const routes = {
   policy: "/policy",
   privacy: "/privacy",
   finder: "/finder",
+  player: "/player",
   reset: "/reset",
   profile: "/@:name",
 };
