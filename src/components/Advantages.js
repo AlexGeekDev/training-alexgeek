@@ -9,9 +9,9 @@ const Advantages = () => {
   return (
     <Fragment>
       {" "}
-      <Container className="advantages px-5">
+      <Container fluid className="advantages px-5">
         <Row className="justify-content-around">
-          <Col xs={12}>
+          <Col xs={12} xl={3} md={2}>
             <img
               src={seguridad}
               alt="seguridad"
@@ -24,7 +24,7 @@ const Advantages = () => {
               centrarte en tus clases
             </h6>
           </Col>
-          <Col xs={12}>
+          <Col xs={12} xl={3} md={2}>
             <img
               src={ahorro}
               alt="seguridad"
@@ -38,7 +38,7 @@ const Advantages = () => {
               reconocidas.
             </h6>
           </Col>
-          <Col xs={12}>
+          <Col xs={12} xl={3} md={2}>
             <img
               src={calidad}
               alt="seguridad"
@@ -52,7 +52,7 @@ const Advantages = () => {
               internacional.
             </h6>
           </Col>
-          <Col xs={12}>
+          <Col xs={12} xl={3} md={2}>
             <img
               src={flexibilidad}
               alt="seguridad"

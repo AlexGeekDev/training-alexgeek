@@ -8,11 +8,14 @@ import { useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Header = () => {
-  const { active } = useUiDataContext();
-  const { userDb } = useUserDataContext();
+  const { active, setActive } = useUiDataContext();
+  const { userDb, setUserDb, setEnglish } = useUserDataContext();
   const navigate = useNavigate();
 
-  const logOut = () => {
+  const logOut = async () => {
+    await setActive(false);
+    await setUserDb();
+    await setEnglish();
     logout();
     navigate("/");
   };

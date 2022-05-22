@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import geekLanguage from "../assets/logo/GeekLanguage.png";
+import { Link } from "react-router-dom";
 
 const CoursesCard = () => {
   return (
@@ -23,9 +24,11 @@ const CoursesCard = () => {
           cuando quieras cualquier tema, sin pagar montos excesivos.
         </Card.Text>
         <div className="d-grid gap-2">
-          <Button variant="primary" size="lg">
-            Ir al curso!
-          </Button>
+          <Link to="/player">
+            <Button variant="primary" size="lg">
+              Ir al curso!
+            </Button>
+          </Link>
         </div>
       </Card.Body>
     </Card>
