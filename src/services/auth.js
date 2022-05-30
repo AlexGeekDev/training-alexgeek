@@ -35,6 +35,7 @@ export const regWithEmail = (email, password, name) => {
         provider: "e-mail",
         logins: 1,
         lastLogin: new Date().getTime(),
+        paymentMethod: false,
       };
       await setDoc(userRef, userData);
 
@@ -137,6 +138,7 @@ export const regWithGoogle = async () => {
           freeUses: 0,
           logins: 1,
           lastLogin: new Date().getTime(),
+          paymentMethod: false,
         };
         await setDoc(userRef, userData);
 
@@ -183,6 +185,7 @@ export const regWithFacebook = async () => {
           freeUses: 0,
           logins: 1,
           lastLogin: new Date().getTime(),
+          paymentMethod: false,
         };
         await setDoc(userRef, userData);
 

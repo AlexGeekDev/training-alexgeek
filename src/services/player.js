@@ -5,6 +5,8 @@ export const updateTimeVideo = async (email, time, course) => {
   const playerRef = doc(db, course, email);
   const playerFirestore = await getDoc(playerRef);
 
+  //hacer un array de cada curso
+
   if (playerFirestore.exists()) {
     await updateDoc(playerRef, {
       time,
