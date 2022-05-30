@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
+import { Elements } from "@stripe/react-stripe-js";
+import { useStripeDataContext } from "../context/stripeContext";
 import routes from "./routes";
 import { PrivateRoute } from "./PrivateRoute";
 import Layout from "../views/layout/Layout";
@@ -16,6 +18,7 @@ import Privacy from "../views/aboutUs/Privacy";
 import NotFound from "../views/NotFound";
 
 const Paths = () => {
+  const { stripePromise, options } = useStripeDataContext();
   return (
     <BrowserRouter>
       <Layout>
@@ -30,7 +33,9 @@ const Paths = () => {
             path={routes.profile}
             element={
               <PrivateRoute>
-                <Profile />
+                <Elements stripe={stripePromise} options={options}>
+                  <Profile />
+                </Elements>
               </PrivateRoute>
             }
           />

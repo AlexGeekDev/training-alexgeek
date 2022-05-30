@@ -1,39 +1,37 @@
 import React, { Fragment } from "react";
 import logo from "../assets/logo/janz.png";
+import Cards from "../components/Cards";
+import {
+  Col,
+  Row,
+  Container,
+  Card,
+  Button,
+  Modal,
+  Form,
+  Spinner,
+} from "react-bootstrap";
 
 const ProfileFace = (props) => {
   return (
     <Fragment>
-      <div className="container profile">
-        <div className="row text-center">
-          <div className="col-xs-1-12 col-lg-6 profile--header">
+      <Container className="profile">
+        <Row className="text-center">
+          <Col xs={12} lg={6} className="profile--header">
             <img className="profile--logo" src={logo} alt="" />
-          </div>
-          <div className="col-xs-1-12 col-lg-6 profile--header">
+          </Col>
+          <Col xs={12} lg={6} className="profile--header">
             <p className="profile--name"> {`${props.user.name}`} </p>
-          </div>
-        </div>
-        <div className="row text-center">
-          <div className="col-xs-1-12 col-lg-6 profile--face">
-            <div className="profile--info mt-5">
-              <img src={props.user.photo} alt="" />
-              <p> {`${props.user.name} / Janz ${props.user.role}`} </p>
-            </div>
-          </div>
-          <div className="col-xs-1-12 col-lg-6 profile--score mt-4">
+          </Col>
+        </Row>
+        <Row className="text-center">
+          <Col xs={12} lg={12} className="profile--score mt-4">
             <div className="profile--info mt-1">
-              <h2 className="text-primary"> {`Métodos de pago`} </h2>
-              <Fragment>
-                <h2 className="text-warning">TDC Uno</h2>
-              </Fragment>
-              <Fragment>
-                <h2 className="text-warning">Tdc Dos</h2>
-              </Fragment>
-              <button>Agregar método de pago</button>
+              <Cards />
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </Fragment>
   );
 };

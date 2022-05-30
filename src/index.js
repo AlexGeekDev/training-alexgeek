@@ -8,13 +8,16 @@ import "core-js/es/map";
 import "core-js/es/set";
 import { UiDataProvider } from "./context/uiContext";
 import { UserDataProvider } from "./context/userContext";
+import { StripeDataProvider } from "./context/stripeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(
   <React.StrictMode>
     <UiDataProvider>
       <UserDataProvider>
-        <App />
+        <StripeDataProvider>
+          <App />
+        </StripeDataProvider>
       </UserDataProvider>
     </UiDataProvider>
   </React.StrictMode>
